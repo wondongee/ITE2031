@@ -1,0 +1,15 @@
+	lw 0 1 ten	register 1 is updated at WB stage
+	noop
+	add 1 2 3	add instruction reads register value at ID stage so add cannot read the updated value of register 1. (Data Hazard)
+	noop		so we can solve this problem by including two more noop instructions in front of add instruction
+	noop
+	noop
+	beq 1 3 done
+	noop
+	noop
+	noop
+done	halt
+ten	.fill 10
+neg1	.fill -1
+A0	.fill 0
+A1	.fill 1

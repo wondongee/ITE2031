@@ -1,0 +1,22 @@
+	lw 0 1 ten
+	lw 0 2 neg2
+	noop
+	noop
+	lw 1 3 9
+	noop
+	noop
+start	add 2 1 1	add %2 + %1 -> %1
+	noop
+	noop
+	noop
+	beq 1 3 done	if %1 == %3 break
+	noop
+	noop
+	beq 0 0 start 	go to loop
+	noop
+	noop
+done halt 
+zero .fill 0
+six .fill 6 
+ten .fill 10 
+neg2 .fill -2
